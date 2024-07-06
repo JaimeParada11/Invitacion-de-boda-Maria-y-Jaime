@@ -31,18 +31,18 @@
     </div>
     
     <!-- Añadir el elemento de audio -->
-    <audio id="weddingMusic" autoplay>
+    <audio id="weddingMusic">
         <source src="cancion.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
+    
+    <!-- Añadir un botón para reproducir la música -->
+    <button id="playButton">Reproducir Música</button>
 
     <script>
-        // Reproducir el audio automáticamente cuando la página se carga
-        window.addEventListener('load', function() {
+        document.getElementById('playButton').addEventListener('click', function() {
             var audio = document.getElementById('weddingMusic');
-            audio.play().catch(error => {
-                console.log('Auto-play was prevented:', error);
-            });
+            audio.play();
         });
     </script>
 </body>
