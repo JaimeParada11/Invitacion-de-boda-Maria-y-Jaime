@@ -29,5 +29,21 @@
             <button type="submit">Confirmar Asistencia</button>
         </form>
     </div>
+    
+    <!-- Añadir el elemento de audio -->
+    <audio id="weddingMusic" autoplay>
+        <source src="cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Reproducir el audio automáticamente cuando la página se carga
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('weddingMusic');
+            audio.play().catch(error => {
+                console.log('Auto-play was prevented:', error);
+            });
+        });
+    </script>
 </body>
 </html>
