@@ -11,9 +11,9 @@
         <h1>¡Nos Casamos!</h1>
         <p>Nos encantaría que nos acompañes en nuestro día especial.</p>
         <h2>Detalles de la Boda</h2>
-        <p><strong>Fecha:</strong> 1 de Noviembre de 2025</p>
+        <p><strong>Fecha:</strong> 15 de Octubre de 2024</p>
         <p><strong>Hora:</strong> 5:00 PM</p>
-        <p><strong>Lugar:</strong> Aguablanquilla</p>
+        <p><strong>Lugar:</strong> Jardín de Eventos "El Paraíso"</p>
 
         <h2>Confirma tu Asistencia</h2>
         <form id="rsvp-form">
@@ -42,7 +42,11 @@
     <script>
         document.getElementById('playButton').addEventListener('click', function() {
             var audio = document.getElementById('weddingMusic');
-            audio.play();
+            audio.play().then(() => {
+                console.log('Playing');
+            }).catch(error => {
+                console.error('Error playing audio:', error);
+            });
         });
     </script>
 </body>
