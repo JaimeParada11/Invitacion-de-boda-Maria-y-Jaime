@@ -35,13 +35,12 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 section {
@@ -95,6 +94,11 @@ footer {
         display: block;
         margin: 0.5rem 0;
     }
+
+    form input, form select, form button {
+        width: 100%;
+    }
+}
 
     form input, form select, form button {
         width: 100%;
