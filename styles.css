@@ -1,47 +1,72 @@
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-}
-
-.envelope-container {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; /* Añade perspectiva para la animación 3D */
-}
-
-.envelope {
-    width: 100%;
-    height: auto;
-    transition: transform 1s;
-    transform-style: preserve-3d; /* Asegura que la transformación sea en 3D */
-}
-
-.envelope.open {
-    transform: rotateX(-180deg); /* Gira el sobre cuando se abre */
-}
-
-.seal-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border: none;
-    border-radius: 50%;
     color: white;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 10; /* Asegura que el botón esté por encima del sobre */
+    text-align: center;
 }
 
-.seal-button:hover {
-    background-color: darkred;
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form select, form button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
