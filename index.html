@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
+    <title>Invitación de Boda María y Jaime</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,22 +24,22 @@
             <h2>Bienvenidos a nuestra Boda</h2>
             <p>Estamos encantados de invitarte a compartir este día tan especial con nosotros.</p>
         </div>
-        <audio id="cancion.mp3" autoplay loop>
-            <source src="song.mp3" type="audio/mpeg">
+        <audio id="bodaAudio" autoplay loop>
+            <source src="musica.mp3" type="audio/mpeg">
             Tu navegador no soporta la reproducción de audio.
         </audio>
     </section>
     
     <section id="nosotros">
         <h2>Nuestra Historia</h2>
-        <p>Aquí va un texto breve sobre la historia de la pareja.</p>
+        <p>Una andaluza y un extremeño se conocieron ya hace 4 años, han decidido dar este paso por petición popular.</p>
     </section>
     
     <section id="evento">
         <h2>El Evento</h2>
-        <p>Fecha: 12 de Octubre de 2024</p>
-        <p>Hora: 4:00 PM</p>
-        <p>Ubicación: Finca Los Rosales</p>
+        <p>Fecha: 1 de Noviembre de 2025</p>
+        <p>Hora: 17:00 PM</p>
+        <p>Ubicación: Salones Aguablanquilla</p>
     </section>
     
     <section id="confirmar">
@@ -54,7 +54,11 @@
             <label for="asistencia">¿Asistirás?</label>
             <select id="asistencia" name="asistencia" required>
                 <option value="si">Sí</option>
-                <option value="no">No</select>
+                <option value="no">No</option>
+            </select>
+            
+            <label for="invitados">Número de invitados:</label>
+            <input type="number" id="invitados" name="invitados" min="1" max="10" required>
             
             <button type="submit">Enviar</button>
         </form>
