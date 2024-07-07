@@ -32,6 +32,7 @@ nav ul li a {
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -72,4 +73,19 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
+}
+
+#playButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#playButton:hover {
+    background-color: #ff79a9;
 }
