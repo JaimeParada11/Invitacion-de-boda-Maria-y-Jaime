@@ -8,13 +8,16 @@
 </head>
 <body>
     <div class="envelope-container">
-        <img src="sobre.webp" alt="Sobre de invitación" class="envelope">
+        <img src="sobre.png" alt="Sobre de invitación" class="envelope" id="envelope">
         <button id="openButton" class="seal-button">Abrir</button>
     </div>
 
     <script>
         document.getElementById('openButton').addEventListener('click', function() {
-            window.location.href = "invitacion.html";
+            document.getElementById('envelope').classList.add('open');
+            setTimeout(function() {
+                window.location.href = "invitacion.html";
+            }, 2000); // Esperar 2 segundos antes de redirigir a la página de invitación
         });
     </script>
 </body>
