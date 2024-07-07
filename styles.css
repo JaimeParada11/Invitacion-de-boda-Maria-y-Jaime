@@ -1,57 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    color: #c0392b;
-}
-
-h2 {
-    color: #2980b9;
-}
-
-form {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
 }
 
-label {
-    margin: 10px 0 5px;
+.envelope-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Añade perspectiva para la animación 3D */
 }
 
-input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.envelope {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+    transform-style: preserve-3d; /* Asegura que la transformación sea en 3D */
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #27ae60;
-    color: white;
+.envelope.open {
+    transform: rotateX(-180deg); /* Gira el sobre cuando se abre */
+}
+
+.seal-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px; /* Añadir margen superior */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10; /* Asegura que el botón esté por encima del sobre */
 }
 
-button:hover {
-    background-color: #2ecc71;
+.seal-button:hover {
+    background-color: darkred;
 }
