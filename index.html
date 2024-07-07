@@ -24,7 +24,7 @@
             <h2>Bienvenidos a nuestra Boda</h2>
             <p>Estamos encantados de invitarte a compartir este día tan especial con nosotros.</p>
         </div>
-        <audio id="bodaAudio" loop>
+        <audio id="bodaAudio" autoplay loop>
             <source src="cancion.mp3" type="audio/mpeg">
             Tu navegador no soporta la reproducción de audio.
         </audio>
@@ -77,9 +77,11 @@
             });
         }
 
-        // Intentar reproducir el audio cuando el usuario desplace la página
+        // Intentar reproducir el audio cuando el usuario interactúe con la página
         window.addEventListener('DOMContentLoaded', (event) => {
-            document.addEventListener('scroll', playAudio, { once: true });
+            document.body.addEventListener('click', playAudio, { once: true });
+            document.body.addEventListener('scroll', playAudio, { once: true });
+            document.body.addEventListener('mousemove', playAudio, { once: true });
         });
     </script>
 </body>
