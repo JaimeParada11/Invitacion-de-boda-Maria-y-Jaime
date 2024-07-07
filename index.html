@@ -7,17 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="envelope-container">
-        <img src="sobre.png" alt="Sobre de invitación" class="envelope" id="envelope">
-        <button id="openButton" class="seal-button">Abrir</button>
-    </div>
-
+    <header>
+        <h1>Invitación de Boda</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#evento">El Evento</a></li>
+                <li><a href="#confirmar">Confirmar Asistencia</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="hero">
+        <div class="overlay">
+            <h2>Bienvenidos a nuestra Boda</h2>
+            <p>Estamos encantados de invitarte a compartir este día tan especial con nosotros.</p>
+        </div>
+        <audio id="bodaAudio" autoplay loop>
+            <source src="song.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </section>
+    
+    <section id="nosotros">
+        <h2>Nuestra Historia</h2>
+        <p>Aquí va un texto breve sobre la historia de la pareja.</p>
+    </section>
+    
+    <section id="evento">
+        <h2>El Evento</h2>
+        <p>Fecha: 12 de Octubre de 2024</p>
+        <p>Hora: 4:00 PM</p>
+        <p>Ubicación: Finca Los Rosales</p>
+    </section>
+    
+    <section id="confirmar">
+        <h2>Confirmar Asistencia</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="asistencia">¿Asistirás?</label>
+            <select id="asistencia" name="asistencia" required>
+                <option value="si">Sí</option>
+                <option value="no">No</select>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Pareja Feliz. Todos los derechos reservados.</p>
+    </footer>
+    
     <script>
-        document.getElementById('openButton').addEventListener('click', function() {
-            document.getElementById('envelope').classList.add('open');
-            setTimeout(function() {
-                window.location.href = "invitacion.html";
-            }, 2000); // Esperar 2 segundos antes de redirigir a la página de invitación
+        // Para asegurar que el audio se reproduce automáticamente en todos los navegadores
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('bodaAudio');
+            audio.play().catch(function() {
+                // Puede ser bloqueado por el navegador, agregar una instrucción al usuario
+                console.log('La reproducción automática está bloqueada por el navegador.');
+            });
         });
     </script>
 </body>
